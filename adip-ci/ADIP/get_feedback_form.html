@@ -1,0 +1,579 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+
+<!--  /get_feedback_form  /3.x [XR&CO'2014], Fri, 18 Mar 2022 15:17:05 GMT -->
+<!-- Added by HTTrack -->
+<meta http-equiv="content-type" content="text/html;charset=ISO-8859-1" /><!-- /Added by HTTrack -->
+
+<head>
+	<link rel="stylesheet" href="../assets/css/demo.css">
+	<script type="text/javascript" src="../ADIP/js/dashboard/artyom.windows.min.js"></script>
+	<script type="text/javascript" src="../assets/js/voice_nav.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script type="text/javascript" src="js/homepage/inspect_element.js"></script>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1">
+	
+	<title>ADIP</title>
+</head>
+<style>
+	.main_div {
+		overflow-x: hidden;
+	}
+</style>
+
+<body class="home main_div">
+	<div class="wrapper">
+		<div class="container-fluid">
+			<div class="row">
+
+
+
+
+
+
+
+				<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+				<html>
+
+				<head>
+					<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+					<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1">
+					<link rel="icon" href="images/fvlogo1l.png" type="image/png" sizes="64x64">
+					<title>ADIP</title>
+
+					<!-- New css added by harshita-->
+					<link href="../../fonts.googleapis.com/css63ac.css?family=Handlee|Open+Sans:300,400,600,700,800"
+						rel="stylesheet">
+					<!--  <link href="css/bootstrap.css" rel="stylesheet" />-->
+					<link href="css/homepage/latest/home.css" rel="stylesheet" />
+					<link href="css/homepage/latest/bootstrap-responsive.css" rel="stylesheet" />
+					<link href="css/homepage/latest/flexslider.css" rel="stylesheet" />
+					<link href="css/homepage/latest/prettyPhoto.css" rel="stylesheet" />
+					<link href="css/homepage/latest/camera.css" rel="stylesheet" />
+					<link href="css/homepage/latest/jquery.bxslider.css" rel="stylesheet" />
+					<link href="css/homepage/latest/style.css" rel="stylesheet" />
+					<link rel="stylesheet"
+						href="../cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+					<link href="css/homepage/latest/site.css" rel="stylesheet" />
+					<!-- Theme skin -->
+					<link href="css/homepage/latest/color/default.css" rel="stylesheet" />
+
+					<!-- Latest compiled and minified CSS -->
+					<link rel="stylesheet" href="css/homepage/latest/bootstrap.min-3.3.7.css">
+					<link rel="stylesheet" href="css/homepage/header.css">
+					<link rel="stylesheet" href="css/dashboard/sweetalert.css">
+
+					<link rel="stylesheet"
+						href="../cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+					
+								<div class="form-group col-md-12  col-sm-12 pad-top pad-bottom">
+									<div class="col-md-2 col-sm-2 col-md-offset-2">
+										<h3 id="registrationCaptchaOne" class="registrationCaptchaOne"
+											style="user-select:none;">286794</h3>
+									</div>
+									<div class="col-md-6 col-sm-6 zero ">
+										<div class="col-md-4">
+											<input id="regCaptcha" name="regCaptcha" placeholder="Enter Captcha"
+												type="text" class="form-control" required="required"
+												onblur="checkcaptcha();" value="" />
+										</div>
+										<div class="col-md-2 col-lg-2 col-sm-2 col-xs-2 refresh_reg"
+											onclick="changeRegistrationCaptcha()">
+											<i class="fa fa-refresh" aria-hidden="true"></i>
+										</div>
+									</div>
+
+								</div>
+
+
+								<div class="form-group col-md-12  col-sm-12 pad-top pad-bottom">
+									<div class="col-md-2 col-sm-2 col-md-offset-2">
+										<button type="button" class="btn btn-primary" id="OTP"><i
+												class="fa fa-mobile fa-1x pad-right"></i> Click to get OTP on Mobile no
+										</button>
+									</div>
+									<div class="col-md-2 col-sm-2 col-md-offset-1">
+										<input id="num_pin_no" name="num_pin_no" placeholder="OTP Pin" type="text"
+											class="form-control" onblur="checkOTP()" value="0" />
+										<div class="required-icon">
+										</div>
+
+
+										<label>
+											Enter the OTP you have
+											received on your Mobile No.
+										</label>
+										<div id="existMobOTP"></div>
+
+
+									</div>
+								</div>
+								<div class="form-group col-md-12 text-center">
+
+									<button type="button" id="save1" class="btn btn-primary"><i
+											class="fa fa-floppy-o fa-1x pad-right"></i> Submit</button>
+									<a class="header-list" href="login.html"><button type="button" id="cancel"
+											class="btn btn-primary"><i class="fa fa-times fa-1x pad-right"></i>
+											Cancel</button></a>
+								</div>
+							</div>
+						</div>
+						<div>
+							<input type="hidden" name="_csrf" value="8973322f-0bb7-4761-8a55-60f146b49b10" />
+						</div>
+					</form>
+				</div>
+			</section>
+		</body>
+
+
+		<script type="text/javascript">
+
+			function checkcaptcha() {
+
+				//alert("in    ");
+
+				var generated_captch = document.getElementById("registrationCaptchaOne");
+				var name = registrationCaptchaOne.textContent || registrationCaptchaOne.innerText;
+				var enter_capcha = $('#regCaptcha').val();
+				/// alert("name "+name);
+
+				// alert("generated_captch "+generated_captch);
+				//alert("enter_capcha "+enter_capcha);
+
+				if (enter_capcha != "" && enter_capcha != null) {
+
+					if (enter_capcha == name) {
+						$("#save1").attr("disabled", false);
+
+						//$('#save').show();
+						//}
+
+						flag = true;
+					}
+					else {
+						//alert("not matched");
+						error_message("Invalid Captcha ");
+
+						$("#save1").attr("disabled", true);
+						//$("#cont").attr("disabled", true);
+						$('#save1').attr("disabled", true);
+						flag = false;
+						changeRegistrationCaptcha();
+					}
+
+				}
+				else {
+
+
+					error_message("Captcha cannot be blank");
+					$('#save1').attr("disabled", true);
+
+				}
+
+			}
+
+			function changeRegistrationCaptcha() {
+				$.ajax({
+					type: "GET",
+					url: "getCaptcha",
+					success: function (data) {
+						document.getElementById("registrationCaptchaOne").innerHTML = data;
+						$(regCaptcha).val('');
+					}
+
+				});
+			}
+
+
+			function checkOTP() {
+				var selectVal = "";
+
+				selectVal = $('#num_pin_no').val();
+				//alert("hhhhh"+selectVal);
+				//pinGenFlag = 0;
+				if (selectVal != "" && selectVal != null) {
+					$.ajax({
+						type: "GET",
+						url: "check_exist_mobile_OTP",
+						data: { selectVal, selectVal },
+						success: function (response) {
+							//alert("in res otp   "+response);
+
+							$('#existMobOTP').text("");
+							//$('#existEmailNo').text("");
+							if (response == "blank") {
+
+								error_message('please enter OTP ');
+								$("#save1").attr("disabled", true);
+
+								flag = false;
+
+
+							}
+							if (response == "NO") {
+								///	$('#existMobOTP').show();
+
+								//pinGenFlag = 0;
+								//	if (subRradioVal == 1) {
+
+								//  alert("inside 1111");
+								$('#existMobOTP')
+									.append(
+										"<strong><span style='color:red'>Mobile OTP is Wrong.</span></strong>");
+
+								error_message('You have entered wrong Mobile OTP. Please enter the correct Mobile OTP ');
+								//}
+								$("#save1").attr("disabled", true);
+
+								flag = false;
+
+							}
+
+							if (response == "yes") {
+
+
+								//pinGenFlag = 1;
+								//if (subRradioVal == 1) {
+								$('#num_pin_no').closest('.col-md-10')
+									.removeClass('has-error').addClass(
+										'has-success');
+								$('#existMobOTP').hide();
+								ok_alert('Entered otp is correct.Kindly click on submit button to submit form');
+								$("#save1").attr("disabled", false);
+								$('#save1').show();
+								//}
+
+								flag = true;
+							}
+							return flag;
+						},
+						error: function (e) {
+							alert('Error: ' + e);
+						}
+					});
+
+				}
+				else {
+
+					error_message('Please enter the correct Mobile OTP ');
+					flag = false;
+				}
+
+			}
+
+			$('#OTP')
+				.click(
+					function () {
+						//alert("inside otp");
+
+						var b = $('#mblno').val();
+						//alert("inside otp "+b);
+						$.ajax({
+							type: "GET",
+							url: "generateOTP",
+							data: { b, b },
+							success: function (response) {
+								if (response == "1") {
+
+
+									ok_alert('OTP send to your mentioned mobile no');
+
+								}
+
+							}
+						});
+
+
+					});
+
+
+			$("#frm")
+				.bootstrapValidator(
+					{
+						fields: {
+
+							strMobileNo: {
+								validators: {
+									notEmpty: {
+										message: "Mobile number is required and can\'t be empty"
+									},
+									regexp: {
+										regexp: /^[0-9\-]+$/,
+										message: "Please enter valid numbers"
+									},
+									stringLength: {
+										min: 10,
+										max: 10,
+										message: "Number having 10 digit only  "
+									}
+								}
+							},
+							num_pin_no: {
+								validators: {
+									notEmpty: {
+										message: 'Please enter  PIN'
+									},
+									integer: {
+										message: 'Please enter numeric value'
+									},
+									stringLength: {
+										min: 4,
+										max: 4,
+										message: 'PIN can consist of 4 digits'
+									}
+								}
+							},
+
+							strName: {
+								validators: {
+									notEmpty: {
+										message: 'Name is required and cannot be empty'
+									},
+									stringLength: {
+										max: 50,
+										message: 'Name can contain maximum of 50 characters'
+									},
+									regexp: {
+										regexp: /^[a-zA-Z\s]+$/,
+										message: 'The Name can only consist of alphabets'
+									}
+
+								}
+							},
+
+
+							aid_type: {
+								validators: {
+									callback: {
+										message: 'Please choose an option',
+										callback: function (value, validator, $field) {
+											// Get the selected options
+											var options = validator.getFieldElements('aid_type').val();
+											return (options != 0);
+										}
+									}
+								}
+							},
+							apply_for: {
+								validators: {
+									callback: {
+										message: 'Please choose an option',
+										callback: function (value, validator, $field) {
+											// Get the selected options
+											var options = validator.getFieldElements('apply_for').val();
+											return (options != 0);
+										}
+									}
+								}
+							},
+
+
+							strProblem: {
+								validators: {
+									notEmpty: {
+										message: 'The suggestions or issues are required and cannot be empty'
+									},
+									stringLength: {
+										max: 500,
+										message: 'The suggestions or issues must be less than 500 characters'
+									},
+									regexp: {
+										regexp: /^[a-zA-Z0-9.,\-\/\s ()]+$/,
+										message: 'Suggestions and issues should be less than 500 characters and only alphabet,numbers, special characters(. , / () -) and white spaces are permitted'
+									}
+
+								}
+							},
+							benef_adhaar_no: {
+								validators: {
+
+									stringLength: {
+										max: 20,
+										message: ' No can contain maximum of 20 characters'
+									},
+									regexp: {
+										regexp: /^[a-zA-Z0-9 +/]+$/,
+										/* regexp : /^[a-zA-Z0-9]+$/, */
+										message: ' No can consist of alphabets and numbers and (/) are permitted'
+									}
+
+								}
+							},
+
+
+						}
+					});
+
+
+
+
+
+
+			function submit_form1() {
+				//alert("ihhh");
+				document.getElementById("frm").action = "/ADIP/save_Feedback_form";
+				document.getElementById("frm").method = "POST";
+				$("#frm").submit();
+
+			}
+
+			$('#save1').click(function () {
+				//alert("in save111");
+				var bV = $("#frm").data('bootstrapValidator');
+				bV.validate();
+				if (bV.isValid()) {
+
+					confirm_alert('Do you Really want to save?', 'save1');
+
+				}
+				else {
+					error_message("Please fill all details");
+				}
+
+			});
+
+			function confirm_alert(msg, type) {
+				//alert("okok");
+				var m = msg.split('.');
+				var msg1 = m[0];
+				msg2 = m[1];
+				swal(
+					{
+						title: "Are you sure?", text: msg1,
+						type: "warning",
+						showCancelButton: true,
+						confirmButtonColor: "#34A534",
+						confirmButtonText: "OK",
+						cancelButtonText: "Cancel",
+						closeOnConfirm: true,
+						closeOnCancel: true
+					},
+					function (isConfirm) {
+						if (isConfirm) {
+
+							if (type == "save1") {
+
+								submit_form1();
+								//flag=true; 
+							}
+							else if (type == "delete") {
+								flag = true;
+								submit_form_delete();
+							}
+							else if (type == "modify") {
+								submit_form_update();
+							}
+							else if (type == "ok") {
+								flag = true;
+								submit_form_delete();
+							}
+						}
+
+						else {
+							imp = false;
+						}
+					});
+			}
+
+		</script>
+		<script type="text/javascript" src="js/validation/customValidation.js"></script>
+		<!-- 	<script type="text/javascript" src="js/Registration/registration.js"></script>
+ -->
+		<script type="text/javascript" src="js/formFieldValidation/CSRF2.js"></script>
+		<script type="text/javascript" src="js/formFieldValidation/md5.js"></script>
+		<script type="text/javascript" src="js/globalJs/globalJs.js"></script>
+
+		</html>
+	</div>
+
+</div>
+<div class="container-fluid">
+	<div class="push"></div>
+
+	<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+	<html>
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<title>ADIP</title>
+
+	</head>
+
+	<body>
+
+		<!-- <section class="cdlogo">
+  <div class="container">
+<div class="row ">
+					<div class="col-md-1 col-sm-2 col-xs-12  img_footer">
+				<img src="images/cdac_logo.png" class="text-right img_xs" alt="CDAC logo">
+			</div>
+				<div class="col-md-5 col-sm-5 col-xs-12 ">
+					<p class="white ">
+					 Designed, Developed and Maintained
+						by <b><a href="https://www.cdac.in/">C-DAC</a></b>
+					</p></div>
+					
+			 	
+					<div class="col-md-6 col-sm-5 col-xs-12 mbview">
+					
+					<div class="counterv float-right">
+  <span>0</span>
+  <span>1</span>
+  <span>0</span>
+  <span>4</span>
+  <span>9</span>
+ 
+</div><label class="label black float-right">Visitor Count</label>
+					</div> 
+				</div>
+	
+	   </div>
+  <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa fa-angle-up"></i></button>
+	</section>
+	 -->
+
+
+
+
+	</body>
+	<style>
+		.counterv span {
+
+			display: inline-block;
+			padding: 6px 6px 4px;
+			border-radius: 3px;
+			background: #f3f4f5;
+			margin-right: -2px;
+			color: #f59220;
+			font-weight: bold;
+		}
+
+		.counterv {
+
+			margin: 1em 0 .5em;
+		}
+
+		.footer_new {
+			padding: 10px 40px;
+			background: #143f81;
+		}
+
+		.sugam_logo_footer {
+			vertical-align: baseline !important;
+		}
+	</style>
+
+	</html>
+</div>
+</div>
+<div class="mic">
+	<button class="btn" style="width: 50px !important; height: 50px;"onclick="startContinuousArtyom()">
+		<div class="pulse-ring"></div>
+		<i class="fa fa-microphone" aria-hidden="true"></i>
+	</button>
+</div>
+</body>
+
+</html>
